@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: misskeyorangeai
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: misskeyorangeai
+  template:
+    metadata:
+      labels:
+        name: misskeyorangeai
+    spec:
+      containers:
+      - name: misskeyorangeai
+        image: docker pull ghcr.io/neos-love/orange-misskey-bot:latest
+        imagePullPolicy: Always
+        env:
+          - name: MISS_KEY
+            value: {{ .Values.bot.misskeyToken | quote }}
+          - name: OPENAI_API_KEY
+            value: {{ .Values.bot.openaiToken | quote }}
