@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: misskeyorangeai
-        image: docker pull ghcr.io/neos-love/orange-misskey-bot:latest
+        image: ghcr.io/neos-love/orange-misskey-bot:latest
         imagePullPolicy: Always
         env:
           - name: MISS_KEY
