@@ -1,0 +1,13 @@
+apiVersion: v1
+entries:
+  misskeyorangeai:
+  - apiVersion: v1
+    appVersion: "0.1"
+    created: "2023-06-23T02:47:00.17652237Z"
+    description: A Helm chart for misskey OrangeAI
+    digest: 00f14920c7b216510200e57c694143f0066b9f49332019ffa332cbfa41b7d654
+    name: misskeyorangeai
+    urls:
+    - misskeyorangeai-0.0.1.tgz
+    version: 0.0.1
+generated: "2023-06-23T02:47:00.176106172Z"
