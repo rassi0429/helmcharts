@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: concurrent-now-listening-bot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: concurrent-now-listening-bot
+  template:
+    metadata:
+      labels:
+        name: concurrent-now-listening-bot
+    spec:
+      containers:
+      - name: concurrent-now-listening-bot
+        image: ghcr.io/rassi0429/concurrent-now-listening-bot:v0.0.1:latest
+        imagePullPolicy: Always
+        env:
+          - name: CCID
+            value: {{ .Values.bot.CCID | quote }}
+          - name: PRIVATE_KEY
+            value: {{ .Values.bot.PRIVATE_KEY | quote }}
+          - name: CONCURRENT_HOST
+            value: {{ .Values.bot.CONCURRENT_HOST | quote }}
+          - name: CONCURENT_POST_STREAMS
+            value: {{ .Values.bot.CONCURENT_POST_STREAMS | quote }}
+          - name: LASTFM_API_USER
+            value: {{ .Values.bot.LASTFM_API_USER | quote }}
+          - name: LASTFM_API_KEY
+            value: {{ .Values.bot.LASTFM_API_KEY | quote }}

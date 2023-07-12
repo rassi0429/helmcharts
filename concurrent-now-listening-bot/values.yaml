@@ -1,0 +1,7 @@
+bot:
+    CCID: ''
+    PRIVATE_KEY: ''
+    CONCURRENT_HOST: ''
+    CONCURENT_POST_STREAMS: ''
+    LASTFM_API_USER: ''
+    LASTFM_API_KEY: ''
