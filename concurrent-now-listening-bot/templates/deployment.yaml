@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: concurrent-now-listening-bot
-        image: ghcr.io/rassi0429/concurrent-now-listening-bot:v0.0.1:latest
+        image: ghcr.io/rassi0429/concurrent-now-listening-bot:latest
         imagePullPolicy: Always
         env:
           - name: CCID

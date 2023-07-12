@@ -2,4 +2,4 @@ apiVersion: v1
 appVersion: "0.1"
 description: A Helm chart for Concurrent now listening bot
 name: concurrent-now-listening-bot
-version: 0.0.1
+version: 0.0.2
