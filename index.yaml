@@ -1,9 +1,19 @@
 apiVersion: v1
 entries:
+  concurrent-now-listening-bot:
+  - apiVersion: v1
+    appVersion: "0.1"
+    created: "2023-07-12T18:44:23.112570976Z"
+    description: A Helm chart for Concurrent now listening bot
+    digest: a5a1621f1b792ba3ee011862ca7e1c0fc6f428b80d51443ede414932a8fb9e93
+    name: concurrent-now-listening-bot
+    urls:
+    - concurrent-now-listening-bot-0.0.1.tgz
+    version: 0.0.1
   misskeyorangeai:
   - apiVersion: v1
     appVersion: "0.1"
-    created: "2023-06-23T02:59:44.322503964Z"
+    created: "2023-07-12T18:44:23.113164841Z"
     description: A Helm chart for misskey OrangeAI
     digest: 828f9c3ba97ed960c0bec26de853c02a6ac3980c9a02304f2e572f792d92aa4d
     name: misskeyorangeai
@@ -12,7 +22,7 @@ entries:
     version: 0.0.3
   - apiVersion: v1
     appVersion: "0.1"
-    created: "2023-06-23T02:59:44.322329964Z"
+    created: "2023-07-12T18:44:23.112976588Z"
     description: A Helm chart for misskey OrangeAI
     digest: 786c319f0579714ef839263c71754e3cbbc7264a69b1ca83df10d1b063f052e1
     name: misskeyorangeai
@@ -21,11 +31,11 @@ entries:
     version: 0.0.2
   - apiVersion: v1
     appVersion: "0.1"
-    created: "2023-06-23T02:59:44.322142163Z"
+    created: "2023-07-12T18:44:23.112771532Z"
     description: A Helm chart for misskey OrangeAI
     digest: 00f14920c7b216510200e57c694143f0066b9f49332019ffa332cbfa41b7d654
     name: misskeyorangeai
     urls:
     - misskeyorangeai-0.0.1.tgz
     version: 0.0.1
-generated: "2023-06-23T02:59:44.321599162Z"
+generated: "2023-07-12T18:44:23.112092144Z"
