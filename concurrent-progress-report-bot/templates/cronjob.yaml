@@ -3,7 +3,7 @@ kind: CronJob
 metadata:
   name: concurrent-progress-report-bot
 spec:
-  schedule: {{ .Values.application.cron | quote }}
+  schedule: {{ .Values.bot.cron | quote }}
   jobTemplate:
     spec:
       containers:
