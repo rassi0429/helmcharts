@@ -1,16 +1,10 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: CronJob
 metadata:
   name: concurrent-progress-report-bot
 spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      name: concurrent-progress-report-bot
-  template:
-    metadata:
-      labels:
-        name: concurrent-progress-report-bot
+  schedule: {{ .Values.application.cron | quote }}
+  jobTemplate:
     spec:
       containers:
       - name: concurrent-progress-report-bot

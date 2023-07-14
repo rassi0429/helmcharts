@@ -1,4 +1,5 @@
 bot:
+    cron: '0 9 * * *'
     CCID: ''
     PRIVATE_KEY: ''
     CONCURRENT_HOST: ''
