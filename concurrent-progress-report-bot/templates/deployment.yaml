@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: concurrent-progress-report-bot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: concurrent-progress-report-bot
+  template:
+    metadata:
+      labels:
+        name: concurrent-progress-report-bot
+    spec:
+      containers:
+      - name: concurrent-progress-report-bot
+        image: ghcr.io/rassi0429/concurrent-progress-report-bot:latest
+        imagePullPolicy: Always
+        env:
+          - name: CCID
+            value: {{ .Values.bot.CCID | quote }}
+          - name: PRIVATE_KEY
+            value: {{ .Values.bot.PRIVATE_KEY | quote }}
+          - name: CONCURRENT_HOST
+            value: {{ .Values.bot.CONCURRENT_HOST | quote }}
+          - name: CONCURENT_POST_STREAMS
+            value: {{ .Values.bot.CONCURENT_POST_STREAMS | quote }}
+          - name: GITHUB_TOKEN
+            value: {{ .Values.bot.GITHUB_TOKEN | quote }}

@@ -1,0 +1,6 @@
+bot:
+    CCID: ''
+    PRIVATE_KEY: ''
+    CONCURRENT_HOST: ''
+    CONCURENT_POST_STREAMS: ''
+    GITHUB_TOKEN: ''
