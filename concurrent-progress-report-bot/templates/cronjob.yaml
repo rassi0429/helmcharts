@@ -23,3 +23,4 @@ spec:
                 value: {{ .Values.bot.CONCURENT_POST_STREAMS | quote }}
               - name: GITHUB_TOKEN
                 value: {{ .Values.bot.GITHUB_TOKEN | quote }}
+          restartPolicy: Never
