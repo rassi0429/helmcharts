@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spotify4concurrent
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: spotify4concurrent
+  template:
+    metadata:
+      labels:
+        name: spotify4concurrent
+    spec:
+      containers:
+      - name: spotify4concurrent
+        image: ghcr.io/rassi0429/spotify4concurrent:latest
+        imagePullPolicy: Always
+        env:
+          - name: CLIENT_ID
+            value: {{ .Values.bot.CLIENT_ID | quote }}
+          - name: CLIENT_SECRET
+            value: {{ .Values.bot.CLIENT_SECRET | quote }}
+          - name: REFRESH_TOKEN
+            value: {{ .Values.bot.REFRESH_TOKEN | quote }}
+          - name: CCID
+            value: {{ .Values.bot.CCID | quote }}
+          - name: PRIVATE_KEY
+            value: {{ .Values.bot.PRIVATE_KEY | quote }}
+          - name: CONCURRENT_HOST
+            value: {{ .Values.bot.CONCURRENT_HOST | quote }}
+          - name: CONCURENT_POST_STREAMS
+            value: {{ .Values.bot.CONCURENT_POST_STREAMS | quote }}
