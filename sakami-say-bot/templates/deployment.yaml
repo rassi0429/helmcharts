@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sakami-say-bot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: sakami-say-bot
+  template:
+    metadata:
+      labels:
+        name: sakami-say-bot
+    spec:
+      containers:
+      - name: spotify4concurrent
+        image: ghcr.io/rassi0429/sakami-say-bot:latest
+        imagePullPolicy: Always
+        env:
+          - name: TOKEN
+            value: {{ .Values.bot.TOKEN | quote }}
