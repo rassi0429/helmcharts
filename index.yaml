@@ -3,7 +3,7 @@ entries:
   concurrent-now-listening-bot:
   - apiVersion: v1
     appVersion: "0.1"
-    created: "2023-07-18T16:09:49.935756875Z"
+    created: "2023-07-19T07:14:27.905981007Z"
     description: A Helm chart for Concurrent now listening bot
     digest: c9ca20941bbd26aa23194c122adb19913cb1b3ae21c5af70c40d04dd241b69a6
     name: concurrent-now-listening-bot
@@ -12,7 +12,7 @@ entries:
     version: 0.0.2
   - apiVersion: v1
     appVersion: "0.1"
-    created: "2023-07-18T16:09:49.935565668Z"
+    created: "2023-07-19T07:14:27.905737307Z"
     description: A Helm chart for Concurrent now listening bot
     digest: a5a1621f1b792ba3ee011862ca7e1c0fc6f428b80d51443ede414932a8fb9e93
     name: concurrent-now-listening-bot
@@ -22,7 +22,7 @@ entries:
   concurrent-progress-report-bot:
   - apiVersion: v1
     appVersion: "0.1"
-    created: "2023-07-18T16:09:49.937177986Z"
+    created: "2023-07-19T07:14:27.907417805Z"
     description: A Helm chart for Concurrent develop report
     digest: 2193652945659d6e9af0fc3369d974981a97c13b989fc6c865ce9c769b58ee81
     name: concurrent-progress-report-bot
@@ -31,7 +31,7 @@ entries:
     version: 0.0.5
   - apiVersion: v1
     appVersion: "0.1"
-    created: "2023-07-18T16:09:49.936978582Z"
+    created: "2023-07-19T07:14:27.907145606Z"
     description: A Helm chart for Concurrent develop report
     digest: ffba1607becd81bb266f723d5a202062891c8ea960a2ffd75e949188d0fc9d8f
     name: concurrent-progress-report-bot
@@ -40,7 +40,7 @@ entries:
     version: 0.0.4
   - apiVersion: v1
     appVersion: "0.1"
-    created: "2023-07-18T16:09:49.936766885Z"
+    created: "2023-07-19T07:14:27.906862906Z"
     description: A Helm chart for Concurrent develop report
     digest: 70b42d0da8120ea6f28b0f802eccfeb2ffbef4b8f8cc815d75d6f3eaf8d49874
     name: concurrent-progress-report-bot
@@ -49,7 +49,7 @@ entries:
     version: 0.0.3
   - apiVersion: v1
     appVersion: "0.1"
-    created: "2023-07-18T16:09:49.936508111Z"
+    created: "2023-07-19T07:14:27.906596106Z"
     description: A Helm chart for Concurrent develop report
     digest: 85d5e9618933532410b0d0dc7a8a2dabd7885e3bf235a0a217760b9edd9b7dfc
     name: concurrent-progress-report-bot
@@ -58,7 +58,7 @@ entries:
     version: 0.0.2
   - apiVersion: v1
     appVersion: "0.1"
-    created: "2023-07-18T16:09:49.936284719Z"
+    created: "2023-07-19T07:14:27.906339907Z"
     description: A Helm chart for Concurrent develop report
     digest: 3bb639f647ebef095b96c656f20f7298eecd98c913386e3a88da9ec59cf88a18
     name: concurrent-progress-report-bot
@@ -68,7 +68,7 @@ entries:
   misskeyorangeai:
   - apiVersion: v1
     appVersion: "0.1"
-    created: "2023-07-18T16:09:49.937713526Z"
+    created: "2023-07-19T07:14:27.908941204Z"
     description: A Helm chart for misskey OrangeAI
     digest: 828f9c3ba97ed960c0bec26de853c02a6ac3980c9a02304f2e572f792d92aa4d
     name: misskeyorangeai
@@ -77,7 +77,7 @@ entries:
     version: 0.0.3
   - apiVersion: v1
     appVersion: "0.1"
-    created: "2023-07-18T16:09:49.937535612Z"
+    created: "2023-07-19T07:14:27.907863005Z"
     description: A Helm chart for misskey OrangeAI
     digest: 786c319f0579714ef839263c71754e3cbbc7264a69b1ca83df10d1b063f052e1
     name: misskeyorangeai
@@ -86,21 +86,31 @@ entries:
     version: 0.0.2
   - apiVersion: v1
     appVersion: "0.1"
-    created: "2023-07-18T16:09:49.937363795Z"
+    created: "2023-07-19T07:14:27.907604605Z"
     description: A Helm chart for misskey OrangeAI
     digest: 00f14920c7b216510200e57c694143f0066b9f49332019ffa332cbfa41b7d654
     name: misskeyorangeai
     urls:
     - misskeyorangeai-0.0.1.tgz
     version: 0.0.1
+  sakami-say-bot:
+  - apiVersion: v1
+    appVersion: "0.1"
+    created: "2023-07-19T07:14:27.909278503Z"
+    description: A Helm chart for sakami-say-bot
+    digest: 67df00d314fe4dd2a78d2709801b75815907bdb2a8f6bf7835558ec351fa5b83
+    name: sakami-say-bot
+    urls:
+    - sakami-say-bot-0.0.1.tgz
+    version: 0.0.1
   spotify4concurrent:
   - apiVersion: v1
     appVersion: "0.1"
-    created: "2023-07-18T16:09:49.937923224Z"
+    created: "2023-07-19T07:14:27.909583403Z"
     description: A Helm chart forspotify4concurrent
     digest: 8a35e93dc848a4c5c6a516c9cae7e9e22f9410d4577b950620841d006fcc4a6a
     name: spotify4concurrent
     urls:
     - spotify4concurrent-0.0.1.tgz
     version: 0.0.1
-generated: "2023-07-18T16:09:49.935173858Z"
+generated: "2023-07-19T07:14:27.905189108Z"
