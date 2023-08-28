@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rlp-proxy
+  namespace: rlp-proxy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: rlp-proxy
+  template:
+    metadata:
+      labels:
+        name: rlp-proxy
+    spec:
+      containers:
+      - name: rlp-proxy
+        image: ghcr.io/rassi0429/rlp-proxy:latest
+        imagePullPolicy: Always
+        env:
+          - name: PORT
+            value: {{ .Values.env.PORT | 8080 }}
+          - name: SERVER_URL
+            value: {{ .Values.env.SERVER_URL | quote }}
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: lb
+  namespace: rlp-proxy
+spec:
+  selector:
+    name: rlp-proxy
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: {{ .Values.env.PORT | 8080 }}
+  type: LoadBalancer
