@@ -34,5 +34,5 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-      targetPort: {{ .Values.env.PORT | quote }}
+      targetPort: {{ .Values.env.PORT | toInt }}
   type: LoadBalancer
