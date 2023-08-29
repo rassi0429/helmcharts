@@ -28,8 +28,8 @@ spec:
               value: {{ .Values.CONCURRENT_PRIVATE_KEY | quote }}
             - name: CONCURRENT_HOST
               value: {{ .Values.CONCURRENT_HOST | quote }}
-            - name: CONCURENT_POST_STREAMS
-              value: {{ .Values.CONCURENT_POST_STREAMS | quote }}
+            - name: CONCURRENT_SIG
+              value: {{ .Values.CONCURRENT_SIG | quote }}
             - name: CONFIG
               value: {{ .Values.CONFIG | quote }}
 ---
