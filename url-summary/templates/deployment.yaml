@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: url-summary
+  namespace: url-summary
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: url-summary
+  template:
+    metadata:
+      labels:
+        name: url-summary
+    spec:
+      containers:
+        - name: url-summary
+          image: ghcr.io/rassi0429/url-summary:latest
+          imagePullPolicy: Always
+          resources:
+            requests:
+              memory: 100Mi
+            limits:
+              memory: 100Mi
+          env:
+            - name: PORT
+              value: {{ .Values.env.PORT | quote }}
+            - name: CORS
+              value: {{ .Values.env.CORS | quote }}
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: lb
+  namespace: url-summary
+spec:
+  selector:
+    name: url-summary
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: {{ .Values.env.PORT }}
+  type: LoadBalancer
