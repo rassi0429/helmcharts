@@ -23,19 +23,19 @@ spec:
               memory: 100Mi
           env:
             - name: PORT
-              value: {{ .Values.env.PORT | quote }}
+              value: {{ .Values.env.TARGET_PORT | quote }}
             - name: CORS
               value: {{ .Values.env.CORS | quote }}
 ---
 kind: Service
 apiVersion: v1
 metadata:
-  name: lb
+  name: url-summary-lb
 spec:
   selector:
     name: url-summary
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: {{ .Values.env.PORT }}
+      port: {{ .Values.LISTEN_PORT }}
+      targetPort: {{ .Values.env.TARGET_PORT }}
   type: LoadBalancer
