@@ -38,4 +38,4 @@ spec:
     - protocol: TCP
       port: {{ .Values.LB_LISTEN_PORT }}
       targetPort: {{ .Values.APP_TARGET_PORT }}
-  type: LoadBalancer
+  type: {{ .Values.LB_TYPE }}
