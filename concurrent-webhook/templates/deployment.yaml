@@ -31,7 +31,7 @@ spec:
             - name: CONCURRENT_SIG
               value: {{ .Values.CONCURRENT_SIG | quote }}
             - name: CONFIG
-              value: {{ .Values.CONFIG | quote }}
+              value: {{ .Values.CONFIG | toJson | quote }}
 ---
 kind: Service
 apiVersion: v1
