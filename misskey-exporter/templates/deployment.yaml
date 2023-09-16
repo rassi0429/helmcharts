@@ -25,10 +25,10 @@ spec:
 kind: Service
 apiVersion: v1
 metadata:
-  name: concurrent-webhook-lb
+  name: misskey-exporter-lb
 spec:
   selector:
-    name: concurrent-webhook
+    name: misskey-exporter
   ports:
     - protocol: TCP
       port: {{ .Values.LB_LISTEN_PORT }}
