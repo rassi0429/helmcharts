@@ -1,0 +1,18 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: misskey-note-statistics
+spec:
+  schedule: {{ .Values.cron | quote }}
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: misskey-note-statistics
+            image: ghcr.io/neos-love/misskey-note-statistics:latest
+            imagePullPolicy: Always
+            env:
+              - name: MISSKEY_API_KEY
+                value: {{ .Values.misskey_api_key | quote }}
+          restartPolicy: Never

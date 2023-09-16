@@ -1,0 +1,2 @@
+misskey_api_key: ""
+cron: "0 9 * * *"
