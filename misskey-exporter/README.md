@@ -1,6 +1,5 @@
-# concurrent-webhook
-
-concurrent-webhook
+# misskey-exporter
+misskey-exporter
 
 ## repo
 
