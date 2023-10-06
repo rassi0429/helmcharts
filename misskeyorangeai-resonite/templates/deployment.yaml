@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: misskeyorangeai-r
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: misskeyorangeai-r
+  template:
+    metadata:
+      labels:
+        name: misskeyorangeai-r
+    spec:
+      containers:
+      - name: misskeyorangeai-r
+        image: ghcr.io/rassi0429/orange-misskey-bot-for-resonite-love:latest
+        imagePullPolicy: Always
+        env:
+          - name: MISS_KEY
+            value: {{ .Values.bot.misskeyToken | quote }}
+          - name: OPENAI_API_KEY
+            value: {{ .Values.bot.openaiToken | quote }}
+          - name: ENDPOINT
+            value: {{ .Values.bot.ENDPOINT | quote }}

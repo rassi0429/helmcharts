@@ -1,0 +1,4 @@
+bot:
+    misskeyToken: ''
+    openaiToken: ''
+    ENDPOINT: 'misskey.resonite.love'
