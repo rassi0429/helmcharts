@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nnjskun
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: nnjskun
+  template:
+    metadata:
+      labels:
+        name: nnjskun
+    spec:
+      containers:
+        - name: nnjskun
+          image: ghcr.io/rassi0429/nnjs-kun-v2-for-resonite-love:latest
+          imagePullPolicy: Always
+          resources:
+            requests:
+              memory: 100Mi
+            limits:
+              memory: 100Mi
+          env:
+            - name: DISCORD_TOKEN
+              value: {{ .Values.DISCORD_TOKEN | quote }}
+            - name: OPENAI_API_KEY
+              value: {{ .Values.OPENAI_API_KEY | quote }}
+            - name: DISCORD_CHANNEL
+              value: {{ .Values.DISCORD_CHANNEL | quote }}
+            - name: GAS_URL
+              value: {{ .Values.GAS_URL | quote }}
