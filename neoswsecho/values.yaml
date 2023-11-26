@@ -1,0 +1,2 @@
+LB_LISTEN_PORT: 80
+LB_TYPE: LoadBalancer

@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: neoswsecho
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: neoswsecho
+  template:
+    metadata:
+      labels:
+        name: neoswsecho
+    spec:
+      containers:
+        - name: neoswsecho
+          image: ghcr.io/rassi0429/neoswsecho:latest
+          imagePullPolicy: Always
+          resources:
+            requests:
+              memory: 100Mi
+            limits:
+              memory: 100Mi
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: neoswsecho-lb
+spec:
+  selector:
+    name: neoswsecho
+  ports:
+    - protocol: TCP
+      port: {{ .Values.LB_LISTEN_PORT }}
+      targetPort: 3000
+  type: {{ .Values.LB_TYPE }}
