@@ -1,2 +1,3 @@
 WEBHOOKS: 
 cron: '* * * * *'
+storageClassName: nfs

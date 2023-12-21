@@ -2,4 +2,4 @@ apiVersion: v1
 appVersion: "0.1"
 description: A Helm chart resonite-update-webhook
 name: resonite-update-webhook
-version: 0.0.2
+version: 0.0.3
