@@ -20,6 +20,7 @@ spec:
               env:
                 - name: WEBHOOKS
                   value: {{ .Values.WEBHOOKS | quote }}
+              restartPolicy: Never
               volumeMounts:
                 - name: json-pvc
                   mountPath: /app/json
