@@ -8,4 +8,4 @@ spec:
   resources:
     requests:
       storage: 10Mi
-    storageClassName: { .Values.storageClassName | quote }
+    storageClassName: {{ .Values.storageClassName | quote }}
