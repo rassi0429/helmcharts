@@ -1,0 +1,25 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: resonite-update-webhook
+spec:
+  schedule: {{ .Values.cron | quote }}
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: resonite-update-webhook
+              image: ghcr.io/rassi0429/resonite-update-webhook:latest
+              imagePullPolicy: Always
+              resources:
+                requests:
+                  memory: 300Mi
+                limits:
+                  memory: 300Mi
+              env:
+                - name: WEBHOOKS
+                  value: {{ .Values.WEBHOOKS | quote }}
+              volumeMounts:
+                - name: json-pvc
+                  mountPath: /app/json
